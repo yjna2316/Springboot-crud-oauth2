@@ -36,7 +36,7 @@ echo "> $JAR_NAME에 실행권한 추가"
 
 # Jar 파일은 실행 권한이 없는 상태
 # nohup으로 실행할 수 있게 실행 권한 부
-chomod +x $JAR_NAME
+chmod +x $JAR_NAME
 
 echo "> $JAR_MAME 실행"
 
@@ -45,9 +45,6 @@ echo "> $JAR_MAME 실행"
 # 이렇게 하지 않으면 nohup.out파일이 생기지 않고, CodeDeploy 로그에 표준 입출력이 출력된다.
 # nohup이 끝나기 전까지 CodeDeploy도 끝나지 않으니 꼭 이렇게 해야만 한다.
 nohup java -jar  \
-      -Dspring.config.location=classpath:/application.properties, \
-      classpath:/application-real.properties, \
-      /home/ec2-user/app/application-oauth.properties, \
-      /home/ec2-user/app/application-real-db.properties \
+      -Dspring.config.location=classpath:/application.properties,classpath:/application-real.properties,/home/ec2-user/app/application-oauth.properties,/home/ec2-user/app/application-real-db.properties \
       -Dspring.profiles.active=real \
       $JAR_NAME > $REPOSITORY/nohup.out 2>&1 &

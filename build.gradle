@@ -20,7 +20,7 @@ apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management' // 스프링 부트 의존성 관리해주는 plugins
 
 group 'com.jayy.book'
-version '1.0-SNAPSHOT'
+version '1.0.1-SNAPSHOT'
 
 repositories {
     mavenCentral()
