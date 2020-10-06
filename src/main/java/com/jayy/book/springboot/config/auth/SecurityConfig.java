@@ -20,7 +20,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .headers().frameOptions().disable()
                 .and()
                     .authorizeRequests() // 2. URL별 권한 설정
-                    .antMatchers("/", "/css/**", "/images/**", "/js/**", "/h2-console/**").permitAll()
+                    .antMatchers("/", "/css/**", "/images/**", "/js/**", "/h2-console/**","/profile").permitAll()
                     .antMatchers("/api/v1/**").hasRole(Role.USER.name())
                     .anyRequest().authenticated()
                 .and()
