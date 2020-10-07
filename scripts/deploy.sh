@@ -14,7 +14,7 @@ echo "> 현재 구동 중인 애플리케이션 pid 확인"
 # 스프링 부트 애플리케이션 이름(Springboot-crud-oauth2)으로 된 다른 프로그램들이 있을 수 있어
 # Springboot-crud-oauth2 로 된 jar(pgrep -fl Springboot-crud-oauth2 | grep jar)
 # 프로세스를 찾은 뒤 ID를 찾는다(|awk '{print $1}')
-CURRENT_PID= $(pgrep -fl Springboot-crud-oauth2 | grep jar | awk '{print $1}')
+CURRENT_PID=$(pgrep -fl Springboot-crud-oauth2 | grep jar | awk '{print $1}')
 
 echo "현재 구동 중인 애플리케이션 pid: $CURRENT_PID"
 
