@@ -1,6 +1,6 @@
 # SPRINGBOOT STUDY
 
-1. 기본 CRUD API 구현
+1. CRUD API 구현
  
 2. Spring Security와 OAuth2 이용한 소셜 로그인 구현
    - google
